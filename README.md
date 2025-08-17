@@ -1,4 +1,4 @@
-# CUDA QA Demo Programs
+# CUDA Demo Programs
 
 This repository contains simple CUDA program to demonstrate GPU programming, it showcases core CUDA concepts like kernel execution, memory management, and parallelism, with a Python script to automate testing.
 
