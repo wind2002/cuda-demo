@@ -3,8 +3,8 @@
 This repository contains simple CUDA program to demonstrate GPU programming, it showcases core CUDA concepts like kernel execution, memory management, and parallelism, with a Python script to automate testing.
 
 ## Prerequisites
-- NVIDIA GPU with CUDA support (check [CUDA GPUs list](https://developer.nvidia.com/cuda-gpus)).
-- CUDA Toolkit installed (download from [NVIDIA](https://developer.nvidia.com/cuda-downloads)).
+- NVIDIA GPU with CUDA support.
+- CUDA Toolkit installed.
 - Python 3.x for running the test script.
 - nvcc compiler (included in CUDA Toolkit).
 - Linux or Windows environment.
