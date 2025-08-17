@@ -28,7 +28,19 @@ This repository contains simple CUDA program to demonstrate GPU programming, it 
    ```
    The Python script compiles and tests all programs, verifying their output.
 
-## File Structure
-- `vectorAdd.cu`: Vector addition program.
-- `test_cuda_programs.py`: Python script for automated testing.
-- `README.md`: This file.
+## Understanding `vectorAdd.cu`
+Here’s a breakdown of what the program does:
+
+1. **Purpose**: Adds two arrays (`A` and `B`) element-wise to produce a result array (`C`) using the GPU.
+2. **Key CUDA Concepts**:
+   - **Kernel**: A function (`vectorAdd`) that runs on the GPU. It’s marked with `__global__` and executed by many threads in parallel.
+   - **Threads and Blocks**: The program splits the work into small pieces (threads) organized into blocks. Each thread adds one pair of elements (e.g., `C[i] = A[i] + B[i]`).
+   - **Memory Management**: Data is moved between the CPU (host) and GPU (device) using `cudaMalloc` and `cudaMemcpy`.
+3. **Program Flow**:
+   - Allocate memory for arrays on the CPU and GPU.
+   - Initialize two input arrays with random numbers.
+   - Copy arrays to the GPU.
+   - Launch the `vectorAdd` kernel to perform addition.
+   - Copy the result back to the CPU.
+   - Verify the result by checking if `C[i] = A[i] + B[i]` for all elements.
+   - Free memory.
